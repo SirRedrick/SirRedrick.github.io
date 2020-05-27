@@ -121,16 +121,22 @@ random.addEventListener("click", function () {
 
   base_str.value = randomPointBuy[0];
   updateResults(randomPointBuy[0], 1);
+  trackCost(randomPointBuy[0], 0);
   base_dex.value = randomPointBuy[1];
   updateResults(randomPointBuy[1], 2);
+  trackCost(randomPointBuy[1], 1);
   base_con.value = randomPointBuy[2];
   updateResults(randomPointBuy[2], 3);
+  trackCost(randomPointBuy[2], 2);
   base_int.value = randomPointBuy[3];
   updateResults(randomPointBuy[3], 4);
+  trackCost(randomPointBuy[3], 3);
   base_wis.value = randomPointBuy[4];
   updateResults(randomPointBuy[4], 5);
+  trackCost(randomPointBuy[4], 4);
   base_cha.value = randomPointBuy[5];
   updateResults(randomPointBuy[5], 6);
+  trackCost(randomPointBuy[5], 5);
 });
 
 //Updating modifires
@@ -164,10 +170,10 @@ let raceScores = {
   elf_wood: [0, 2, 0, 0, 1, 0],
   gnome_forest: [0, 1, 0, 2, 0, 0],
   gnome_rock: [0, 0, 1, 2, 0, 0],
-  half_elf: [0, 0, 0, 0, 0, 2], // !todo! add option to chose two stats which will be increased by 1
+  half_elf: [0, 0, 0, 0, 0, 2],
   half_orc: [2, 0, 1, 0, 0, 0],
   human: [1, 1, 1, 1, 1, 1],
-  human_variant: [0, 0, 0, 0, 0, 0], //!todo! add option to chose two stats which will be increased by 1
+  human_variant: [0, 0, 0, 0, 0, 0],
   tiefling: [0, 0, 0, 1, 0, 2],
 };
 

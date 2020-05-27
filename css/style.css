@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+td,
+th {
+  border: 1px solid #000;
+}
+
+/* Ability Scores Generator */
+.choose {
+  display: none;
+}
+
+/* Monster Block */
+.monster-block {
+  list-style-type: none;
+}
+
+.monster-block span {
+  font-weight: bold;
+}
+
+.size-type-alignment {
+  font-style: italic;
+}
+
+.stats {
+  display: flex;
+}
+
+.stat {
+  width: 50px;
+  height: 2.3rem;
+  text-align: center;
+}
+
+.modifier-low,
+.modifier-med,
+.modifier-high {
+  font-weight: bold;
+}
+
+.modifier-low {
+  color: red;
+}
+
+.modifier-high {
+  color: #adff2f;
+}

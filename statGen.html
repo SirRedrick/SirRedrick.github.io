@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D 5e | Бестиарий</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Набор Инструментов для D&D 5e</h1>
+
+      <ul>
+        <li><a href="races.html">Расы</a></li>
+        <li><a href="classes.html">Классы</a></li>
+        <li><a href="conditions.html">Состояния</a></li>
+        <li><a href="statGen.html">Генератор Очков Способностей</a></li>
+        <li><a href="bestiary.html">Бестиарий</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h2>Генератор Очков Способностей</h2>
+
+      <section>
+        <h3>Стандартный массив:</h3>
+        <p>
+          Если вы хотите сэкономить время или вам не нравится идея случайного
+          определения значений характеристик, вы можете использовать следующие
+          числа:<b> 15, 14, 13, 12, 10, 8</b>. Распределите их как пожелаете
+        </p>
+      </section>
+
+      <section>
+        <h3>Пробросить очки</h3>
+        <button id="get_stats">Roll</button>
+        <table id="stat_roll">
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Настройка значений</h3>
+
+        <div class="stat-buy">
+          <div class="stat-buy-item-1">
+            <label for="budget">Бюджет</label>
+            <input type="number" id="budget" value="27" readonly />
+
+            <label for="remaining">Оставшиеся</label>
+            <input type="number" id="remaining" value="27" readonly />
+
+            <button id="reset">reset</button>
+
+            <button id="random">random</button>
+
+            <table id="point_buy">
+              <thead>
+                <tr>
+                  <td></td>
+                  <th>Начальные</th>
+                  <th>Расовый Бонус</th>
+                  <th class="choose">Выбор</th>
+                  <th></th>
+                  <th>Значение</th>
+                  <th>Мод</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>СИЛ</td>
+                  <td>
+                    <input
+                      id="base_str"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="1" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+                <tr>
+                  <td>ЛОВ</td>
+                  <td>
+                    <input
+                      id="base_dex"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="2" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+                <tr>
+                  <td>ТЕЛ</td>
+                  <td>
+                    <input
+                      id="base_con"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="3" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+                <tr>
+                  <td>ИНТ</td>
+                  <td>
+                    <input
+                      id="base_int"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="4" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+                <tr>
+                  <td>МУД</td>
+                  <td>
+                    <input
+                      id="base_wis"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="5" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+                <tr>
+                  <td>ХАР</td>
+                  <td>
+                    <input
+                      id="base_cha"
+                      type="number"
+                      value="8"
+                      max="15"
+                      min="8"
+                    />
+                  </td>
+                  <td>0</td>
+                  <td class="choose">
+                    <input class="choose-stat" type="checkbox" id="6" />
+                  </td>
+                  <td>=</td>
+                  <td>8</td>
+                  <td>-1</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <label for="class">Выберете расу</label>
+            <select name="classes" id="class">
+              <option value="default">Никакой</option>
+              <option value="dragonborn">Драконорождённый</option>
+              <option value="dwarf_hill">Дворф, холмовой</option>
+              <option value="dwarf_mountain">Дворф, горный</option>
+              <option value="elf_drow">Эльф, дроу</option>
+              <option value="elf_high">Эльф, высший</option>
+              <option value="elf_wood">Эльф, лесной</option>
+              <option value="gnome_forest">Гном, лесной</option>
+              <option value="gnome_rock">Гном, скальный</option>
+              <option value="half_elf">Полуэльф</option>
+              <option value="half_orc">Полуорк</option>
+              <option value="human">Человек</option>
+              <option value="human_variant">Человек (Вариант)</option>
+              <option value="tiefling">Тифлинг</option>
+            </select>
+          </div>
+
+          <div class="stat-buy-item-2">
+            <h4>Стоимость очков Способностей</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Очки</th>
+                  <th>Модификатор</th>
+                  <th>Стоимость</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8</td>
+                  <td>-1</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>-1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>+0</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>+0</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>+1</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>+1</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>+2</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>+2</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/statGenScript.js"></script>
+  </body>
+</html>

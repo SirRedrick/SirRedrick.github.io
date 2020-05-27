@@ -263,38 +263,80 @@ $("[type=checkbox]").on("change", function (evt) {
 //#region Tracking value change in base ability scores input fields
 let base_str = document.getElementById("base_str");
 base_str.addEventListener("input", function () {
-  updateResults(base_str.value, 1);
-  trackCost(base_str.value, 0);
-  console.log(this.value);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_str.value, 1);
+    trackCost(base_str.value, 0);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    console.log(this.value);
+    this.value = 8;
+    updateResults(base_str.value, 1);
+    trackCost(base_str.value, 0);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 
 let base_dex = document.getElementById("base_dex");
 base_dex.addEventListener("input", function () {
-  updateResults(base_dex.value, 2);
-  trackCost(base_dex.value, 1);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_dex.value, 2);
+    trackCost(base_dex.value, 1);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    this.value = 8;
+    updateResults(base_dex.value, 2);
+    trackCost(base_dex.value, 1);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 
 let base_con = document.getElementById("base_con");
 base_con.addEventListener("input", function () {
-  updateResults(base_con.value, 3);
-  trackCost(base_con.value, 2);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_con.value, 3);
+    trackCost(base_con.value, 2);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    this.value = 8;
+    updateResults(base_con.value, 3);
+    trackCost(base_con.value, 2);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 
 let base_int = document.getElementById("base_int");
 base_int.addEventListener("input", function () {
-  updateResults(base_int.value, 4);
-  trackCost(base_int.value, 3);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_int.value, 4);
+    trackCost(base_int.value, 3);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    this.value = 8;
+    updateResults(base_int.value, 4);
+    trackCost(base_int.value, 3);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 
 let base_wis = document.getElementById("base_wis");
 base_wis.addEventListener("input", function () {
-  updateResults(base_wis.value, 5);
-  trackCost(base_wis.value, 4);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_wis.value, 5);
+    trackCost(base_wis.value, 4);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    this.value = 8;
+    updateResults(base_wis.value, 5);
+    trackCost(base_wis.value, 4);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 
 let base_cha = document.getElementById("base_cha");
 base_cha.addEventListener("input", function () {
-  updateResults(base_cha.value, 6);
-  trackCost(base_cha.value, 5);
+  if (parseInt(this.value, 10) <= 15 && parseInt(this.value, 10) >= 8) {
+    updateResults(base_cha.value, 6);
+    trackCost(base_cha.value, 5);
+  } else if (parseInt(this.value, 10) > 15 || parseInt(this.value, 10) < 8) {
+    this.value = 8;
+    updateResults(base_cha.value, 6);
+    trackCost(base_cha.value, 5);
+    alert("Используйте как задумано пожалуйста");
+  }
 });
 //#endregion

@@ -265,6 +265,7 @@ let base_str = document.getElementById("base_str");
 base_str.addEventListener("input", function () {
   updateResults(base_str.value, 1);
   trackCost(base_str.value, 0);
+  console.log(this.value);
 });
 
 let base_dex = document.getElementById("base_dex");

@@ -17,6 +17,86 @@ th {
   border: 1px solid #000;
 }
 
+/* Main page */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  list-style-type: none;
+  text-align: center;
+  column-count: 2;
+}
+
+.main-nav .bestiary-links {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  list-style-type: none;
+  text-align: center;
+  column-count: 5;
+}
+
+.main-nav .statGen-links {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  list-style-type: none;
+  text-align: center;
+  column-count: 1;
+}
+
+.main-nav .statGen-links li {
+  padding-top: 1rem;
+}
+
+/* Main page grid */
+.main-nav {
+  margin: 0 auto;
+  padding: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(4, 200px);
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+.main-item-1 {
+  text-align: center;
+  padding: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #eee;
+}
+.main-item-2 {
+  text-align: center;
+  padding: 1rem;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: #eee;
+}
+.main-item-3 {
+  text-align: center;
+  padding: 1rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #eee;
+}
+.main-item-4 {
+  text-align: center;
+  padding: 1rem;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: #eee;
+}
+.main-item-5 {
+  text-align: center;
+  padding: 1rem;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: #eee;
+}
+
 /* Ability Scores Generator */
 .choose {
   display: none;

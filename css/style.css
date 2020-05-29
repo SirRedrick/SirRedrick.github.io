@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+:root {
+  --text-color-primary: #e40712;
+}
+
 * {
+  font-family: Oswald, sans-serif;
   box-sizing: border-box;
 }
 
@@ -7,6 +14,7 @@ body {
   margin: 0;
 }
 
+/* General styling */
 table {
   border-collapse: collapse;
 }
@@ -17,7 +25,28 @@ th {
   border: 1px solid #000;
 }
 
+/* links */
+a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+}
+
+.main-link {
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  background-color: #242527;
+}
+
 /* Main page */
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  color: #e40712;
+}
+
 .main-nav ul {
   margin: 0;
   padding: 0;
@@ -36,6 +65,15 @@ th {
   column-count: 5;
 }
 
+.main-nav .conditions-links {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  list-style-type: none;
+  text-align: center;
+  column-count: 3;
+}
+
 .main-nav .statGen-links {
   margin: 0;
   padding: 0;
@@ -46,7 +84,7 @@ th {
 }
 
 .main-nav .statGen-links li {
-  padding-top: 1rem;
+  padding-top: 0.7rem;
 }
 
 /* Main page grid */
@@ -92,8 +130,8 @@ th {
 .main-item-5 {
   text-align: center;
   padding: 1rem;
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 5;
   background-color: #eee;
 }
 

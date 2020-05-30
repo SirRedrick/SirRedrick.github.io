@@ -5,6 +5,8 @@
   --red-text-color: #e40712;
   --primary-background-color: #191a1b;
   --secondary-background-color: #242527;
+  --light-background-colo: #c6cad4;
+  --divide-color: #403a4d;
 }
 
 * {
@@ -15,6 +17,24 @@
 body {
   padding: 0;
   margin: 0;
+  background: url(../img/background/logo.png);
+  background-position: 60vw, 50vh;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main {
+  padding: 0 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+  color: #fff;
+  background-color: var(--secondary-background-color);
 }
 
 p {
@@ -69,15 +89,47 @@ a:hover {
   text-decoration: none;
 }
 
+/* Heading */
+.heading-container {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-background-color);
+  border-bottom: 1px solid var(--red-text-color);
+}
+
+.heading-container h1 {
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.heading-container ul {
+  list-style-type: none;
+}
+
+.heading-container li {
+  display: inline;
+  margin-left: 0.2rem;
+  padding-right: 0.3rem;
+  border-right: 1.5px solid var(--divide-color);
+}
+
+.heading-container li:last-child {
+  border-right: none;
+}
+
 /* Main page */
 .main-heading h1 {
   color: #fff;
+  margin: 0;
 }
 
 .main-heading {
+  padding: 1rem;
   text-align: center;
   background-color: var(--primary-background-color);
-  border: 5px solid var(--secondary-background-color);
+  border-bottom: 1px solid var(--red-text-color);
 }
 
 .main-nav ul {
@@ -169,6 +221,85 @@ a:hover {
   grid-column-start: 1;
   grid-column-end: 5;
   background-color: #eee;
+}
+
+/* Races */
+.race-tab {
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--secondary-background-color);
+  margin: 1rem;
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 200px;
+}
+
+.race-tab h3 {
+  color: #fff;
+  background-color: var(--primary-background-color);
+  border-bottom: 2px solid var(--divide-color);
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.race-tab p {
+  padding: 1rem;
+}
+
+.race-tab a {
+  padding: 1rem;
+  color: var(--grey-text-color);
+}
+
+.race-tab a:hover {
+  color: var(--secondary-background-color);
+}
+
+.gnome {
+  background-image: url(../img/background/gnome.png);
+}
+
+.dwarf {
+  background-image: url(../img/background/dwarf.png);
+  background-position: 99% 60px;
+}
+
+.dragonborn {
+  background-image: url(../img/background/dragonborn.png);
+  background-position: 99% 60px;
+}
+
+.half-orc {
+  background-image: url(../img/background/halforc.png);
+  background-position: 99% 60px;
+}
+
+.halfling {
+  background-image: url(../img/background/halfling.png);
+  background-position: 99% 60px;
+}
+
+.half-elf {
+  background-image: url(../img/background/halfelf.png);
+  background-position: 99% 60px;
+}
+
+.tiefling {
+  background-image: url(../img/background/tiefling.png);
+  background-position: 99% 60px;
+}
+
+.human {
+  background-image: url(../img/background/human.png);
+  background-position: 99% 60px;
+}
+
+.elf {
+  background-image: url(../img/background/elf.png);
+  background-position: 99% 60px;
 }
 
 /* Ability Scores Generator */

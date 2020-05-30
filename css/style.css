@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 :root {
-  --text-color-primary: #e40712;
+  --grey-text-color: #81838b;
+  --red-text-color: #e40712;
+  --primary-background-color: #191a1b;
+  --secondary-background-color: #242527;
 }
 
 * {
@@ -11,6 +14,10 @@
 
 body {
   padding: 0;
+  margin: 0;
+}
+
+p {
   margin: 0;
 }
 
@@ -25,26 +32,52 @@ th {
   border: 1px solid #000;
 }
 
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: var(--grey-text-color);
+  background-color: var(--primary-background-color);
+}
+
+/* Utility */
+.text-accent {
+  color: var(--red-text-color);
+}
+
 /* links */
 a {
+  color: #fff;
   text-decoration: none;
-  color: var(--text-color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--red-text-color);
+  color: var(--grey-text-color);
 }
 
 .main-link {
-  color: #fff;
+  color: var(--grey-text-color);
   text-transform: uppercase;
   display: block;
-  background-color: #242527;
+  background-color: var(--secondary-background-color);
+  border-bottom: 1px solid var(--red-text-color);
+}
+
+.main-link:hover {
+  color: var(--red-text-color);
+  text-decoration: none;
 }
 
 /* Main page */
-.heading {
-  text-align: center;
+.main-heading h1 {
+  color: #fff;
 }
 
-.heading h1 {
-  color: #e40712;
+.main-heading {
+  text-align: center;
+  background-color: var(--primary-background-color);
+  border: 5px solid var(--secondary-background-color);
 }
 
 .main-nav ul {
@@ -89,14 +122,17 @@ a {
 
 /* Main page grid */
 .main-nav {
-  margin: 0 auto;
-  padding: 0 auto;
-
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 140px);
-  grid-template-rows: repeat(4, 200px);
+  grid-template-rows: repeat(4, 210px);
   grid-gap: 15px;
   justify-content: center;
+}
+
+.main-nav div {
+  background-color: var(--primary-background-color);
+  border: 5px solid var(--secondary-background-color);
 }
 
 .main-item-1 {

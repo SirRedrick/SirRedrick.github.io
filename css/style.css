@@ -225,7 +225,6 @@ a:hover {
 
 /* Races */
 .race-tab {
-  height: 250px;
   background-color: rgba(255, 255, 255, 0.9);
   color: var(--secondary-background-color);
   margin: 1rem;
@@ -260,6 +259,7 @@ a:hover {
 
 .gnome {
   background-image: url(../img/background/gnome.png);
+  background-position: 99% 60px;
 }
 
 .dwarf {

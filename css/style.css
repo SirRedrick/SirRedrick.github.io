@@ -758,3 +758,80 @@ button:hover {
     perspective: 1300px;
   }
 }
+
+/* Races, Classes and Monsters */
+.sub-nav {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.sub-nav a {
+  padding: 1rem;
+  color: var(--grey-text-color);
+}
+
+.sub-nav a:hover {
+  color: var(--secondary-background-color);
+}
+
+.class-tab {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--secondary-background-color);
+  margin: 1rem;
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 200px;
+  box-shadow: 5px 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.class-tab h3 {
+  background: var(--primary-background-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--red-text-color);
+}
+
+.class-tab h4 {
+  background: var(--secondary-background-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--red-text-color);
+}
+
+.class-img {
+  margin-left: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 0, 0, 0.2) 100%
+  );
+  border: 3px solid var(--primary-background-color);
+  border-radius: 2%;
+  width: 300px;
+}
+
+.class-tab table {
+  margin: 1rem;
+  border-spacing: 0;
+}
+
+.class-tab table th,
+.class-tab table td {
+  padding: 0.5rem;
+}
+
+.class-tab table th {
+  background: var(--primary-background-color);
+  border-bottom: 1px solid var(--red-text-color);
+  color: #fff;
+}
+
+.class-tab table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.class-tab table td:first-child {
+  border-right: 1px solid var(--red-text-color);
+}

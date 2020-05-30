@@ -1,35 +1,130 @@
 //Printing 6 random ability scores
-function printStats() {
-  let table = document.getElementById("stat_roll");
-  let stats = [];
+function rollDice() {
+  const dice = [...document.querySelectorAll(".die-list")];
+  sides = document.querySelectorAll(".die-item");
+  for (let i = counter1; i < counter1 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
+  for (let i = counter2; i < counter2 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
+  for (let i = counter3; i < counter3 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
+  for (let i = counter4; i < counter4 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
+  for (let i = counter5; i < counter5 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
+  for (let i = counter6; i < counter6 + 6; i++) {
+    sides[i].style.opacity = 1;
+  }
 
-  //Generating and pushing random ability scores into array of scores(aka stats[])
-  function genRandomStat(arr) {
-    let rolls = [];
+  console.log(sides);
+  dice.forEach((die) => {
+    toggleClasses(die);
+    const roll = getRandomNumber(1, 6);
+    die.dataset.roll = roll;
+    rolls.push(roll);
+  });
 
-    //Generating and adding to array results of 6d die rolls
-    for (i = 0; i < 4; i++) {
-      rolls.push(Math.floor(Math.random() * 6) + 1);
+  console.log(rolls);
+
+  rolls1 = rolls.splice(0, 4);
+  console.log(rolls1);
+
+  rolls2 = rolls.splice(0, 4);
+  console.log(rolls2);
+
+  rolls3 = rolls.splice(0, 4);
+  console.log(rolls3);
+
+  rolls4 = rolls.splice(0, 4);
+  console.log(rolls4);
+
+  rolls5 = rolls.splice(0, 4);
+  console.log(rolls5);
+
+  rolls6 = rolls.splice(0, 4);
+  console.log(rolls6);
+
+  setTimeout(() => {
+    counter1 = removeLowestDie(rolls1, 1) * 6;
+    for (let i = counter1; i < counter1 + 6; i++) {
+      sides[i].style.opacity = 0.1;
     }
+    rolls = [];
+  }, 2500);
+  setTimeout(() => {
+    counter2 = removeLowestDie(rolls2, 2) * 6 + 24;
+    for (let i = counter2; i < counter2 + 6; i++) {
+      sides[i].style.opacity = 0.1;
+    }
+    rolls = [];
+  }, 2500);
+  setTimeout(() => {
+    counter3 = removeLowestDie(rolls3, 3) * 6 + 48;
+    for (let i = counter3; i < counter3 + 6; i++) {
+      sides[i].style.opacity = 0.1;
+    }
+    rolls = [];
+  }, 2500);
+  setTimeout(() => {
+    counter4 = removeLowestDie(rolls4, 4) * 6 + 72;
+    for (let i = counter4; i < counter4 + 6; i++) {
+      sides[i].style.opacity = 0.1;
+    }
+    rolls = [];
+  }, 2500);
+  setTimeout(() => {
+    counter5 = removeLowestDie(rolls5, 5) * 6 + 96;
+    for (let i = counter5; i < counter5 + 6; i++) {
+      sides[i].style.opacity = 0.1;
+    }
+    rolls = [];
+  }, 2500);
+  setTimeout(() => {
+    counter6 = removeLowestDie(rolls6, 6) * 6 + 120;
+    for (let i = counter6; i < counter6 + 6; i++) {
+      sides[i].style.opacity = 0.1;
+    }
+    rolls = [];
+  }, 2500);
 
-    rolls.splice(rolls.indexOf(Math.min(...rolls)), 1); //Removing one(1) lowest roll
-
-    //Summing up the die rolls and pushing them inside stats array
-    const reducer = (a, b) => a + b;
-    arr.push(rolls.reduce(reducer));
-  }
-
-  for (let i = 0; i < 6; i++) {
-    genRandomStat(stats);
-  }
-
-  for (let j = 0; j < 6; j++) {
-    table.rows[0].cells[j].innerHTML = stats[j];
-  }
+  console.log(rolls);
 }
 
-let getStatsButton = document.getElementById("get_stats");
-getStatsButton.addEventListener("click", printStats);
+function toggleClasses(die) {
+  die.classList.toggle("odd-roll");
+  die.classList.toggle("even-roll");
+}
+
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function removeLowestDie(rollss, position) {
+  let lowest = rollss.indexOf(Math.min(...rollss));
+  let lowestNum = Math.min(...rollss);
+  const reducer = (a, b) => a + b;
+  console.log(rollss.reduce(reducer));
+  value = rollss.reduce(reducer) - lowestNum;
+  document.getElementById(`count${position}`).innerHTML = value;
+  return lowest;
+}
+
+document.getElementById("roll-button").addEventListener("click", rollDice);
+
+let rolls = [];
+let counter1 = 0;
+let counter2 = 0;
+let counter3 = 0;
+let counter4 = 0;
+let counter5 = 0;
+let counter6 = 0;
 
 //Point buy table
 

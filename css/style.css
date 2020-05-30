@@ -24,6 +24,7 @@ body {
   background-attachment: fixed;
 }
 
+/* General styling */
 main {
   padding: 0 2rem;
 }
@@ -39,18 +40,9 @@ h2 {
 
 p {
   margin: 0;
+  text-indent: 50px;
+  text-align: justify;
 }
-
-/* General styling */
-/* table {
-  border-collapse: collapse;
-}
-
-table,
-td,
-th {
-  border: 1px solid #000;
-} */
 
 footer {
   padding: 1rem;
@@ -453,7 +445,7 @@ a:hover {
   border-spacing: 0;
 }
 
-.stat-buy table tbody tr:nth-child(odd) {
+.stat-buy table tbody tr:nth-child(even) {
   background: #eee;
 }
 
@@ -463,12 +455,12 @@ a:hover {
 }
 
 .stat-buy table thead td,
-th {
+.stat-buy table thead th {
   border-bottom: 1px solid var(--red-text-color);
 }
 
 .stat-buy table thead th,
-td {
+.stat-buy table thead td {
   border-right: 1px dashed var(--divide-color);
 }
 
@@ -477,8 +469,55 @@ td {
 }
 
 .stat-buy table td,
-th {
+.stat-buy table th {
   padding: 0.5rem;
+}
+
+/* Conditions */
+.conditions-tab {
+  padding: 4rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--secondary-background-color);
+  margin: 1rem;
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 200px;
+  box-shadow: 5px 3px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.conditions-tab h3 {
+  color: #fff;
+  background-color: var(--primary-background-color);
+  border-bottom: 2px solid var(--red-text-color);
+  padding: 0.2rem;
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.conditions-tab table {
+  margin: 1rem;
+  border-spacing: 0;
+}
+
+.conditions-tab table th,
+.conditions-tab table td {
+  padding: 0.5rem;
+}
+
+.conditions-tab table th {
+  background: var(--primary-background-color);
+  border-bottom: 1px solid var(--red-text-color);
+  color: #fff;
+}
+
+.conditions-tab table tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.conditions-tab table td:first-child {
+  border-right: 1px solid var(--red-text-color);
 }
 
 /* Monster Block */

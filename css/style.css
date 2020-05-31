@@ -3,6 +3,7 @@
 :root {
   --grey-text-color: #81838b;
   --red-text-color: #e40712;
+  --green-text-color: #81e407;
   --primary-background-color: #191a1b;
   --secondary-background-color: #242527;
   --light-background-colo: #c6cad4;
@@ -55,6 +56,10 @@ footer {
 /* Utility */
 .text-accent {
   color: var(--red-text-color);
+}
+
+.text-accent-green {
+  color: var(--green-text-color);
 }
 
 .center {
@@ -565,8 +570,12 @@ a:hover {
 
 .stat {
   width: 50px;
-  height: 2.3rem;
+  height: 3rem;
   text-align: center;
+  background: #eee;
+  margin-right: 0.5rem;
+  border: 2px solid var(--secondary-background-color);
+  border-radius: 10px;
 }
 
 .modifier-low,
@@ -576,11 +585,11 @@ a:hover {
 }
 
 .modifier-low {
-  color: red;
+  color: var(--red-text-color);
 }
 
 .modifier-high {
-  color: #adff2f;
+  color: var(--green-text-color);
 }
 
 /* Dice animation */
@@ -789,6 +798,8 @@ button:hover {
 .sub-nav {
   margin-top: 2rem;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .sub-nav a {

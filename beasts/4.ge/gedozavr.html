@@ -9,54 +9,68 @@
 
   <body>
     <header>
-      <h1>Набор Инструментов для D&D 5e</h1>
+      <div class="heading-container">
+        <h1><span class="text-accent">D&D</span> 5e Tools</h1>
 
-      <ul>
-        <li><a href="../../index.html">Главная</a></li>
-        <li><a href="../../races.html">Расы</a></li>
-        <li><a href="../../classes.html">Классы</a></li>
-        <li><a href="../../conditions.html">Состояния</a></li>
-        <li><a href="../../statGen.html">Генератор Очков Способностей</a></li>
-        <li><a href="../../bestiary.html">Бестиарий</a></li>
-      </ul>
+        <ul>
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="../../races.html">Расы</a></li>
+          <li><a href="../../classes.html">Классы</a></li>
+          <li><a href="../../conditions.html">Состояния</a></li>
+          <li><a href="../../statGen.html">Генератор Очков Способностей</a></li>
+          <li><a href="../../bestiary.html">Бестиарий</a></li>
+        </ul>
+      </div>
+      <h2>Гадрозавр</h2>
     </header>
 
     <main>
-      <h2>Гадрозавр</h2>
-
-      <div class="monster-block">
-        <ul class="monster-stat-block">
-          <li class="size-type-alignment">
-            Большой, Зверь, Без мировоззрения
-          </li>
-          <li><span>Класс доспеха:</span> 11 (природный доспех)</li>
-          <li><span>Хиты:</span> 19 (3d10 + 3)</li>
-          <li><span>Скорость:</span> 40 фт.</li>
-          <li class="stats">
-            <div class="stat">
-              <span>СИЛ</span> 15 (<span class="modifier-high">+2</span>)
+      <div class="class-tab">
+        <div class="sub-nav">
+          <div class="sub-nav-data">
+            <div class="monster-block">
+              <ul class="monster-stat-block">
+                <li class="size-type-alignment">
+                  Большой, Зверь, Без мировоззрения
+                </li>
+                <li><span>Класс доспеха:</span> 11 (природный доспех)</li>
+                <li><span>Хиты:</span> 19 (3d10 + 3)</li>
+                <li><span>Скорость:</span> 40 фт.</li>
+                <li class="stats">
+                  <div class="stat">
+                    <span>СИЛ</span> 15 (<span class="modifier-high">+2</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ЛОВ</span> 10 (<span class="modifier-med">0</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ТЕЛ</span> 13 (<span class="modifier-high">+1</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ИНТ</span> 2 (<span class="modifier-low">-4</span>)
+                  </div>
+                  <div class="stat">
+                    <span>МДР</span> 10 (<span class="modifier-med">0</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ХАР</span> 5 (<span class="modifier-low">-3</span>)
+                  </div>
+                </li>
+                <li><span>Навыки:</span> Внимательность +2</li>
+                <li><span>Чувства:</span> Пассивная внимательность 12</li>
+                <li><span>Опасность:</span> 1/4 - 50 оп.</li>
+                <li><span>Источник:</span> «Volo’s guide to monsters»</li>
+              </ul>
             </div>
-            <div class="stat">
-              <span>ЛОВ</span> 10 (<span class="modifier-med">0</span>)
-            </div>
-            <div class="stat">
-              <span>ТЕЛ</span> 13 (<span class="modifier-high">+1</span>)
-            </div>
-            <div class="stat">
-              <span>ИНТ</span> 2 (<span class="modifier-low">-4</span>)
-            </div>
-            <div class="stat">
-              <span>МДР</span> 10 (<span class="modifier-med">0</span>)
-            </div>
-            <div class="stat">
-              <span>ХАР</span> 5 (<span class="modifier-low">-3</span>)
-            </div>
-          </li>
-          <li><span>Навыки:</span> Внимательность +2</li>
-          <li><span>Чувства:</span> Пассивная внимательность 12</li>
-          <li><span>Опасность:</span> 1/4 - 50 оп.</li>
-          <li><span>Источник:</span> «Volo’s guide to monsters»</li>
-        </ul>
+          </div>
+          <div class="sub-nav-img">
+            <img
+              src="../../img/beasts/hadrosaurus.jpg"
+              alt=""
+              class="class-img"
+            />
+          </div>
+        </div>
 
         <section>
           <h3>Действия</h3>
@@ -66,15 +80,28 @@
               досягаемость 5 фт., одна цель. Попадание: 7 (1d10 + 2) дробящего
               урона.
             </li>
+          </ul>
+          >
         </section>
 
         <section>
           <h3>Описание</h3>
           <p>
-            Гадрозавр – это четвероногое травоядное, ходящее на двух ногах, которое можно узнать по костяному гребню на голове. Если выращивать их с детства, то их можно обучить перевозке Маленьких или Средних всадников.
+            Гадрозавр – это четвероногое травоядное, ходящее на двух ногах,
+            которое можно узнать по костяному гребню на голове. Если выращивать
+            их с детства, то их можно обучить перевозке Маленьких или Средних
+            всадников.
           </p>
         </section>
       </div>
     </main>
+
+    <button id="scrollBtn">Наверх</button>
+
+    <footer>
+      <p>Copyright: DND 5e Tools &copy</p>
+    </footer>
+
+    <script src="../js/button.js"></script>
   </body>
 </html>

@@ -9,62 +9,72 @@
 
   <body>
     <header>
-      <h1>Набор Инструментов для D&D 5e</h1>
+      <div class="heading-container">
+        <h1><span class="text-accent">D&D</span> 5e Tools</h1>
 
-      <ul>
-        <li><a href="../../index.html">Главная</a></li>
-        <li><a href="../../races.html">Расы</a></li>
-        <li><a href="../../classes.html">Классы</a></li>
-        <li><a href="../../conditions.html">Состояния</a></li>
-        <li><a href="../../statGen.html">Генератор Очков Способностей</a></li>
-        <li><a href="../../bestiary.html">Бестиарий</a></li>
-      </ul>
+        <ul>
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="../../races.html">Расы</a></li>
+          <li><a href="../../classes.html">Классы</a></li>
+          <li><a href="../../conditions.html">Состояния</a></li>
+          <li><a href="../../statGen.html">Генератор Очков Способностей</a></li>
+          <li><a href="../../bestiary.html">Бестиарий</a></li>
+        </ul>
+      </div>
+      <h2>Дао</h2>
     </header>
 
     <main>
-      <h2>Дао</h2>
-
-      <div class="monster-block">
-        <ul class="monster-stat-block">
-          <li class="size-type-alignment">
-            Большой, Элементаль, Нейтрально-Злой
-          </li>
-          <li><span>Класс доспеха:</span> 18 (природный доспех)</li>
-          <li><span>Хиты:</span> 187 (15d10 + 105)</li>
-          <li>
-            <span>Скорость:</span> 30 фт., (Cкорость полета: 30 фт, Скорость
-            копая 30 фт.)
-          </li>
-          <li class="stats">
-            <div class="stat">
-              <span>СИЛ</span> 23 (<span class="modifier-high">+6</span>)
+      <div class="class-tab">
+        <div class="sub-nav">
+          <div class="sub-nav-data">
+            <div class="monster-block">
+              <ul class="monster-stat-block">
+                <li class="size-type-alignment">
+                  Большой, Элементаль, Нейтрально-Злой
+                </li>
+                <li><span>Класс доспеха:</span> 18 (природный доспех)</li>
+                <li><span>Хиты:</span> 187 (15d10 + 105)</li>
+                <li>
+                  <span>Скорость:</span> 30 фт., (Cкорость полета: 30 фт,
+                  Скорость копая 30 фт.)
+                </li>
+                <li class="stats">
+                  <div class="stat">
+                    <span>СИЛ</span> 23 (<span class="modifier-high">+6</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ЛОВ</span> 12 (<span class="modifier-high">+1</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ТЕЛ</span> 24 (<span class="modifier-high">+7</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ИНТ</span> 12 (<span class="modifier-high">+1</span>)
+                  </div>
+                  <div class="stat">
+                    <span>МДР</span> 13 (<span class="modifier-high">+1</span>)
+                  </div>
+                  <div class="stat">
+                    <span>ХАР</span> 14 (<span class="modifier-high">+2</span>)
+                  </div>
+                </li>
+                <li><span>Иммунитет к статусу:</span> Окаменение</li>
+                <li><span>Спасброски:</span> ИНТ +5, МДР +5, ХАР +6</li>
+                <li>
+                  <span>Чувства:</span> Темное зрение 120 фт., Пассивная
+                  внимательность 11
+                </li>
+                <li><span>Языки:</span> Терран</li>
+                <li><span>Опасность:</span> 11 - 7200 оп.</li>
+                <li><span>Источник:</span> «Monster manual»</li>
+              </ul>
             </div>
-            <div class="stat">
-              <span>ЛОВ</span> 12 (<span class="modifier-high">+1</span>)
-            </div>
-            <div class="stat">
-              <span>ТЕЛ</span> 24 (<span class="modifier-high">+7</span>)
-            </div>
-            <div class="stat">
-              <span>ИНТ</span> 12 (<span class="modifier-high">+1</span>)
-            </div>
-            <div class="stat">
-              <span>МДР</span> 13 (<span class="modifier-high">+1</span>)
-            </div>
-            <div class="stat">
-              <span>ХАР</span> 14 (<span class="modifier-high">+2</span>)
-            </div>
-          </li>
-          <li><span>Иммунитет к статусу:</span> Окаменение</li>
-          <li><span>Спасброски:</span> ИНТ +5, МДР +5, ХАР +6</li>
-          <li>
-            <span>Чувства:</span> Темное зрение 120 фт., Пассивная
-            внимательность 11
-          </li>
-          <li><span>Языки:</span> Терран</li>
-          <li><span>Опасность:</span> 11 - 7200 оп.</li>
-          <li><span>Источник:</span> «Monster manual»</li>
-        </ul>
+          </div>
+          <div class="sub-nav-img">
+            <img src="../../img/beasts/dao.png" alt="" class="class-img" />
+          </div>
+        </div>
 
         <section>
           <h3>Способности</h3>
@@ -170,5 +180,13 @@
         </section>
       </div>
     </main>
+
+    <button id="scrollBtn">Наверх</button>
+
+    <footer>
+      <p>Copyright: DND 5e Tools &copy</p>
+    </footer>
+
+    <script src="../js/button.js"></script>
   </body>
 </html>

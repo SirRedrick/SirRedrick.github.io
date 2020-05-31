@@ -266,6 +266,8 @@ let raceScores = {
   gnome_forest: [0, 1, 0, 2, 0, 0],
   gnome_rock: [0, 0, 1, 2, 0, 0],
   half_elf: [0, 0, 0, 0, 0, 2],
+  halfling_lightfoot: [0, 2, 0, 0, 0, 1],
+  halfling_stout: [0, 2, 1, 0, 0, 0],
   half_orc: [2, 0, 1, 0, 0, 0],
   human: [1, 1, 1, 1, 1, 1],
   human_variant: [0, 0, 0, 0, 0, 0],
